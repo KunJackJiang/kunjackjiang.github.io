@@ -2,6 +2,7 @@
   font-size: 25px;
   font-weight: bold;
   padding: 12px 0;
+  text-align: left;
 }
 .list-post ul {
   box-sizing: border-box;
@@ -25,6 +26,8 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-left: 10px;
+  text-align: left;
 }
 .list-post li .title a {
   font-size: 15px;
