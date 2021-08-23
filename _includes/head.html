@@ -18,4 +18,14 @@
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
   <link href="{{site.baseurl}}/test_page/css/blog.css" rel="stylesheet">
   <link href="{{site.baseurl}}/test_page/css/pricing.css" rel="stylesheet">
+
+    <!-- original -->
+    {%- if page.layout == "mypost" %}
+    <link rel="stylesheet" href="{{site.baseurl}}/static/css/post.css?t={{buildAt}}">
+    <link rel="stylesheet" href="{{site.baseurl}}/static/css/code-dark.css?t={{buildAt}}">
+    <link rel="stylesheet" href="{{site.baseurl}}/static/css/code-light.css?t={{buildAt}}">
+    {%- endif %}
+    {%- if page.layout == "page" %}
+    <link rel="stylesheet" href="{{site.baseurl}}/static/css/page.css?t={{buildAt}}">
+    {%- endif %}
 </head>
