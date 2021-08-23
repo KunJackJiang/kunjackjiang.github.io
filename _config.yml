@@ -2,7 +2,7 @@ encoding: utf-8
 
 # SEO相关信息
 title: Jiang Research Group
-description: TMaize的个人博客
+description: Jiang Researcn Group
 keywords: Jiang,Group,Java,Html,JavaScript
 author: Kun Jiang
 footerText: 'Shanghai JiaoTong University @ 2021 Jiang Research Group'
@@ -17,11 +17,11 @@ exclude: ['CNAME', 'README.md', 'LICENSE', '_site', 'dist', 'Gemfile', 'Gemfile.
 
 # 域名配置
 # baseurl配置,如果网站部署在根目录下的其他目录中，请设置为 /目录名
-domainUrl: 'xxx'
+domainUrl: ''
 baseurl: ''
 
 # 吐个槽地址，会在chat页面中重定向到该地址
-tucaoUrl: https://support.qq.com/product/86335
+#tucaoUrl: https://support.qq.com/product/86335
 
 # 菜单
 #menu:
