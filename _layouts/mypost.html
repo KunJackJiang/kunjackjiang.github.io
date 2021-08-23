@@ -3,6 +3,7 @@
 {% include head.html -%}
 <body ondragstart="return false;">
 {% include header.html -%}
+<div class="marketing">
 <div class="page page-post">
   <h1 class="title" id="{{ page.title }}">{{ page.title }}</h1>
   {% if page.date %}
@@ -16,6 +17,7 @@
     {% include ext-adsense.html -%}
   </div>
   {% endif %}
+</div>
 </div>
 {% include footer.html -%}
 {% include script.html -%}
