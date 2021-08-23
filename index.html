@@ -2,6 +2,9 @@
 layout: page
 title: 首页
 ---
+
+<div class="container marketing">
+
 <div class="page page-index">
   {% for post in site.posts  -%}
     {%- capture post_year %}{{ post.date | date: "%Y" }}{% endcapture -%}
@@ -26,6 +29,8 @@ title: 首页
     {%- if forloop.last or post_previous_year != post_year %}
       </ul>
     </div>
+
     {%- endif %}
   {%- endfor %}
+</div>
 </div>
