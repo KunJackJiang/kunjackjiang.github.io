@@ -1,6 +1,45 @@
 ---
-layout: mypost
+layout: page
 title: 首页
 ---
 
+<div class="page page-index"
+     style="
+    margin-left: 10%;
+    width:90%;
+    margin-top: 5px;
+position:relative;">
+  {% for post in site.posts  -%}
+    {%- capture post_year %}{{ post.date | date: "%Y" }}{% endcapture -%}
+    {%- capture post_previous_year %}{{ post.previousprevious.date | date: "%Y" }}{% endcapture -%}
+    {%- capture post_next_year %}{{ post.next.date | date: "%Y" }}{% endcapture -%}
+    {%- if forloop.first or post_next_year != post_year -%}
+    <div class="list-post">
+      <h2 id="{{post_year}}">{{post_year}}</h2>
+      <ul>
+    {%- endif %}
+        <li>
+          <span class="date">{{ post.date | date: "%Y/%m/%d" }}</span>
+          <div class="page page-post" style="margin-top: 20px;">
+            <h1 class="title" id="{{ page.title }}">{{ page.title }}</h1>
+            {% if page.date %}
+            <div class="subtitle">{{site.author}} 于 {{ page.date | date: "%Y-%m-%d" }} 发布</div>
+            {% endif %}
+            <div class="post">
+              {{ content }}
+            </div>
+            {% if site.extAdsense -%}
+            <div class="adsense" style="overflow: hidden;">
+              {% include ext-adsense.html -%}
+            </div>
+            {% endif %}
+          </div>
 
+        </li>
+    {%- if forloop.last or post_previous_year != post_year %}
+      </ul>
+    </div>
+
+    {%- endif %}
+  {%- endfor %}
+</div>
