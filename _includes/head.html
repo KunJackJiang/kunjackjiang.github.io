@@ -29,14 +29,4 @@
     <link rel="stylesheet" href="{{site.baseurl}}/static/css/page.css?t={{buildAt}}">
     {%- endif %}
 
-    <script>
-        window,onload=function(){
-            var imgs=document.getElementsByTagName('img');
-            for(var i=0,j=imgs.length;i<j;i++){
-                (imgs[i].onerror=function(){
-                    imgs[i].style.display='none';
-                })(); //注意这里的写法。形如(function(){...})()，这是js里的一种特殊写法，很有效。
-            }
-        }
-    </script>
 </head>

@@ -2,7 +2,16 @@
 layout: page
 title: 首页
 ---
-
+<script>
+  window,onload=function(){
+    var imgs=document.getElementsByTagName('img');
+    for(var i=0,j=imgs.length;i<j;i++){
+      (imgs[i].onerror=function(){
+        imgs[i].style.display='none';
+      })(); //注意这里的写法。形如(function(){...})()，这是js里的一种特殊写法，很有效。
+    }
+  }
+</script>
 <div class="page page-index"
      style="
     margin-left: 10%;
@@ -23,9 +32,18 @@ position:relative;">
           <div class="title">
             <a href="{{ site.baseurl | append: post.url }}" class="hover-underline">{{ post.title }}</a>
           </div>
-
-
           <div class ="blog-img">
+            <script type="text/javascript">
+              $(function () {
+                var a = $('body').find('.img img')
+                a.each(function () {
+                  if ($(this).attr('src') == '') {
+                    $(this).parent($('.img')).css("display", "none")
+                    $(this).parent($('.img')).next($('.text')).css("width", "100%")
+                  }
+                })
+              })
+            </script>
             <img src='{{ site.baseurl }}/posts/{{ post.date | date: "%Y/%m/%d" }}/{{ post.title }}.png'>
 
           </div>
