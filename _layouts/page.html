@@ -10,17 +10,6 @@
     text-align: center;
     display: block;
     position: relative;"><b  >News</b></h1>
-    <script type="text/javascript">
-        $(function () {
-            var a = $('section').find('.img img')
-            a.each(function () {
-                if ($(this).attr('src') == '') {
-                    $(this).parent($('.img')).css("display", "none")
-                    $(this).parent($('.img')).next($('.text')).css("width", "100%")
-                }
-            })
-        })
-    </script>
     <section class="jumbotron container bg-light p-2" id="jumbotron">
 {{ content }}
 
