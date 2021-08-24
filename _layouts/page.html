@@ -3,17 +3,6 @@
 {% include head.html -%}
 <body > <!-- ondragstart="return false;"-->
 {% include header.html -%}
-<script type="text/javascript">
-    $(function () {
-        var a = $('body').find('.img img')
-        a.each(function () {
-            if ($(this).attr('src') == '') {
-                $(this).parent($('.img')).css("display", "none")
-                $(this).parent($('.img')).next($('.text')).css("width", "100%")
-            }
-        })
-    })
-</script>
 <main>
 
     <h1 class="display-10 text-dark" style ="margin-top: 20px;
@@ -21,6 +10,17 @@
     text-align: center;
     display: block;
     position: relative;"><b  >News</b></h1>
+    <script type="text/javascript">
+        $(function () {
+            var a = $('section').find('.img img')
+            a.each(function () {
+                if ($(this).attr('src') == '') {
+                    $(this).parent($('.img')).css("display", "none")
+                    $(this).parent($('.img')).next($('.text')).css("width", "100%")
+                }
+            })
+        })
+    </script>
     <section class="jumbotron container bg-light p-2" id="jumbotron">
 {{ content }}
 
