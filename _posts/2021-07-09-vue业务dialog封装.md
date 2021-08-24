@@ -1,5 +1,5 @@
 ---
-layout: mypost
+layout: mypost_content
 title: Vue业务Dialog封装
 ---
 
