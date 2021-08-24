@@ -107,3 +107,11 @@ h1, h2, h3, h4, h5, h6 {
   max-width:120px;
   ;_width:expression(this.width > 201 ? "201px" : this.width);
 }
+
+.img {
+  float: left;
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  margin-right: 31px;
+}
