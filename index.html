@@ -21,12 +21,10 @@ position:relative;">
         <li>
           <span class="date">{{ post.date | date: "%Y/%m/%d" }}</span>
           <div class="title">
-            <a href="{{ site.baseurl | append: post.url }}" class="hover-underline">{{ post.title }}</a>
+            <h1 class="title" id="{{ post.title }}">{{ post.title }}</h1>
           </div>
-          <div class="blog img">
-            {{post.img}}
-          </div>
-
+          <div class="subtitle">{{post.author}} 于 {{ post.date | date: "%Y-%m-%d" }} Released</div>
+         
         </li>
     {%- if forloop.last or post_previous_year != post_year %}
       </ul>
