@@ -24,14 +24,17 @@ position:relative;">
            <a id="{{ post.title }}">{{ post.title }}</a>
           </div>
           <div class="subtitle">{{post.author}} 于 {{ post.date | date: "%Y-%m-%d" }} Released</div>
-          <div class="post">
-            <iframe src="{{site.baseurl}}/pages/categories.html#{{ categorie }}" width="100%" height="100%"  frameborder="0" scrolling="no">
-              <a href="{{site.baseurl}}/pages/categories.html#{{ categorie }}">你的浏览器不支持iframe页面嵌套，请点击这里访问页面内容。</a>
-            </iframe>
 
-          </div>
         </li>
     {%- if forloop.last or post_previous_year != post_year %}
+      </ul>
+      <ul>
+        <div class="post">
+          <iframe src="{{ site.baseurl | append: post.url }}" width="100%" height="100%"  frameborder="0" scrolling="no">
+          </iframe>
+
+        </div>
+
       </ul>
     </div>
 
