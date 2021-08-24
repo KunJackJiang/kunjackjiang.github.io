@@ -3,16 +3,7 @@
 {% include head.html -%}
 <body > <!-- ondragstart="return false;"-->
 {% include header.html -%}
-<script>
-    window,onload=function(){
-        var imgs=document.getElementsByTagName('img');
-        for(var i=0,j=imgs.length;i<j;i++){
-            (imgs[i].onerror=function(){
-                imgs[i].style.display='none';
-            })(); //注意这里的写法。形如(function(){...})()，这是js里的一种特殊写法，很有效。
-        }
-    }
-</script>
+
 <main>
 
     <h1 class="display-10 text-dark" style ="margin-top: 20px;
@@ -21,7 +12,16 @@
     display: block;
     position: relative;"><b  >News</b></h1>
     <section class="jumbotron container bg-light p-2" id="jumbotron">
-
+        <script>
+            window,onload=function(){
+                var imgs=document.getElementsByTagName('img');
+                for(var i=0,j=imgs.length;i<j;i++){
+                    (imgs[i].onerror=function(){
+                        imgs[i].style.display='none';
+                    })(); //注意这里的写法。形如(function(){...})()，这是js里的一种特殊写法，很有效。
+                }
+            }
+        </script>
 {{ content }}
 
     </section>
