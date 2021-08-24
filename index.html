@@ -24,7 +24,7 @@ position:relative;">
             <h1 class="title" id="{{ post.title }}">{{ post.title }}</h1>
           </div>
           <div class="subtitle">{{post.author}} 于 {{ post.date | date: "%Y-%m-%d" }} Released</div>
-         
+
         </li>
     {%- if forloop.last or post_previous_year != post_year %}
       </ul>
