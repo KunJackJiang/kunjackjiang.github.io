@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 首页
+title: Home
 ---
 
 <div class="page page-index"
@@ -20,19 +20,11 @@ position:relative;">
     {%- endif %}
         <li>
           <span class="date">{{ post.date | date: "%Y/%m/%d" }}</span>
-          <div class="page page-post" style="margin-top: 20px;">
-            <h1 class="title" id="{{ page.title }}">{{ page.title }}</h1>
-            {% if page.date %}
-            <div class="subtitle">{{site.author}} 于 {{ page.date | date: "%Y-%m-%d" }} 发布</div>
-            {% endif %}
-            <div class="post">
-              {{ content }}
-            </div>
-            {% if site.extAdsense -%}
-            <div class="adsense" style="overflow: hidden;">
-              {% include ext-adsense.html -%}
-            </div>
-            {% endif %}
+          <div class="title">
+            <a href="{{ site.baseurl | append: post.url }}" class="hover-underline">{{ post.title }}</a>
+          </div>
+          <div class="blog img">
+            {{post.img}}
           </div>
 
         </li>
